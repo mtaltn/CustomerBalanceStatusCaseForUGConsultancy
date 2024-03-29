@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "FindMaxDebtDate";
+}
+
+<h2>Max Debt Date for @ViewBag.Unvan</h2>
+
+@if (DateTime.TryParse(ViewBag.MaxDebtDate.ToString(), out DateTime maxDebtDate))
+{
+    <p>@maxDebtDate.ToShortDateString()</p>
+}
+else
+{
+    <p>Geçersiz tarih formatı</p>
+}

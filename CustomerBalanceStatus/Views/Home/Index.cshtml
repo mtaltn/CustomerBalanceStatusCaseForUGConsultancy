@@ -1,0 +1,30 @@
+﻿@model IEnumerable<CustomerBalanceStatus.Models.Entities.MusteriTanim>
+
+@{
+    ViewBag.Title = "Customer List";
+}
+
+<main>
+    <h1>Customer List</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Unvan</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var musteri in Model)
+            {
+                <tr>
+                    <td>@musteri.ID</td>
+                    <td>@musteri.UNVAN</td>
+                    <td><a href="/Home/FindMaxDebtDate?musteriId=@musteri.ID" class="btn btn-success btn-primary">Find Max Debt Date</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <p id="maxDebtDateResult"></p>
+</main>
