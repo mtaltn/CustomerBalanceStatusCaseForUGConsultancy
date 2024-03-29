@@ -7,7 +7,7 @@ namespace CustomerBalanceStatus.Models.Context
     {
         public AppDbContext() : base("name=ConnectionStringName")
         {
-            // Database.SetInitializer<AppDbContext>(null); // İlerleyen aşamalarda veritabanı oluşturma stratejisini belirtmek için kullanılabilir
+            
         }
 
         public DbSet<MusteriTanim> MusteriTanims { get; set; }
