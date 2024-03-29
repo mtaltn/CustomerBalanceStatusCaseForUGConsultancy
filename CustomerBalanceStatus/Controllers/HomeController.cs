@@ -46,20 +46,8 @@ namespace CustomerBalanceStatus.Controllers
 
         public string FindUnvanById(int musteriId)
         {
-            var musteri = _dbContext.MusteriTanims.FirstOrDefault(x => x.ID == musteriId);
+            var musteri = _dbContext.MusteriTanims.Find(musteriId);
             return musteri != null ? musteri.UNVAN : "";
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-            return View();
         }
     }
 }
